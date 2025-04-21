@@ -51,7 +51,7 @@ export default function ProductsPage() {
                   <AccordionTrigger className="text-white hover:text-yellow-300">Category</AccordionTrigger>
                   <AccordionContent>
                     <div className="space-y-2">
-                      {["Men", "Women", "Kids", "Unisex"].map((category) => (
+                      {["Men", "Women", "Kids"].map((category) => (
                         <div key={category} className="flex items-center space-x-2">
                           <Checkbox id={`category-${category}`} />
                           <label htmlFor={`category-${category}`} className="text-sm text-white cursor-pointer">
@@ -67,7 +67,7 @@ export default function ProductsPage() {
                   <AccordionTrigger className="text-white hover:text-yellow-300">Hero Type</AccordionTrigger>
                   <AccordionContent>
                     <div className="space-y-2">
-                      {["Cosmic", "Vigilante", "Mutant", "Tech", "Mythical"].map((hero) => (
+                      {["Cosmic", "Thanos", "Captain America", "Spiderman", "Nebula"].map((hero) => (
                         <div key={hero} className="flex items-center space-x-2">
                           <Checkbox id={`hero-${hero}`} />
                           <label htmlFor={`hero-${hero}`} className="text-sm text-white cursor-pointer">
@@ -115,7 +115,7 @@ export default function ProductsPage() {
                   <AccordionTrigger className="text-white hover:text-yellow-300">Price</AccordionTrigger>
                   <AccordionContent>
                     <div className="space-y-2">
-                      {["Under $20", "$20 - $30", "$30 - $40", "Over $40"].map((price) => (
+                      {["Under 2000", "2000 - 3000", "3000 - 4000", "Over 4000"].map((price) => (
                         <div key={price} className="flex items-center space-x-2">
                           <Checkbox id={`price-${price}`} />
                           <label htmlFor={`price-${price}`} className="text-sm text-white cursor-pointer">
