@@ -18,18 +18,83 @@ import { AvatarSelector } from "@/components/avatar-selector"
 export default function SignupPage() {
   const router = useRouter()
   const [showPassword, setShowPassword] = useState(false)
+  const [selectedAvatar, setSelectedAvatar] = useState("/avtaar1.jpg")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [formStatus, setFormStatus] = useState<{
+    message: string
+    type: "success" | "error" | "none"
+  }>({ message: "", type: "none" })
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault()
+
+    // Basic validation
+    if (!email || !password || !confirmPassword || !firstName || !lastName) {
+      setFormStatus({
+        message: "Please fill in all required fields",
+        type: "error",
+      })
+      return
+    }
+
+    if (password !== confirmPassword) {
+      setFormStatus({
+        message: "Passwords do not match",
+        type: "error",
+      })
+      return
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      setFormStatus({
+        message: "Please enter a valid email address",
+        type: "error",
+      })
+      return
+    }
+
+    // Simulate successful signup
+    setFormStatus({
+      message: "Account created successfully! Redirecting...",
+      type: "success",
+    })
+
+    // Store user data in localStorage (for demo purposes)
+    const userData = {
+      email,
+      firstName,
+      lastName,
+      avatar: selectedAvatar,
+      // Don't store actual password in localStorage in a real app
+      // This is just for demo purposes
+      isLoggedIn: true,
+    }
+
+    localStorage.setItem("superhero_user", JSON.stringify(userData))
     // In a real app, you would validate and create account here
-    router.push("/")
+    //router.push("/")
+    // Redirect after a short delay
+    setTimeout(() => {
+      router.push("/")
+    }, 1500)
   }
 
-  const avatarOptions = Array.from({ length: 8 }, (_, i) => ({
-    id: i + 1,
-    src: `/avtaar${i+1}.jpg`,
-    alt: `Hero Avatar ${i + 1}`,
-  }))
+  const avatarOptions = [
+    {id: 1, src: "/avtaar1.jpg", alt: "Hero Avtaar1"},
+    {id: 2, src: "/avtaar2.jpg", alt: "Hero Avtaar2"},
+    {id: 3, src: "/avtaar3.jpg", alt: "Hero Avtaar3"},
+    {id: 4, src: "/avtaar4.jpg", alt: "Hero Avtaar4"},
+    {id: 5, src: "/avtaar5.jpg", alt: "Hero Avtaar5"},
+    {id: 6, src: "/avtaar6.jpg", alt: "Hero Avtaar6"},
+    {id: 7, src: "/avtaar7.jpg", alt: "Hero Avtaar7"},
+    {id: 8, src: "/avtaar8.jpg", alt: "Hero Avtaar8"},
+  ]
 
   return (
     <div className="flex min-h-screen items-center justify-center p-4">
@@ -50,7 +115,7 @@ export default function SignupPage() {
             <div className="flex justify-center mb-4">
               <Link href="/">
                 <Image
-                  src="/avtaar1.jpg?height=64&width=64"
+                  src="/placeholder.svg?height=64&width=64"
                   alt="Logo"
                   width={64}
                   height={64}

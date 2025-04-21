@@ -66,7 +66,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/?height=600&width=1200"
-            alt="Hero Background"
+            alt=""
             fill
             className="object-cover opacity-20"
           />
