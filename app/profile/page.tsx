@@ -33,6 +33,8 @@ export default function ProfilePage() {
     { id: "avatar4", src: "/avtaar4.jpg?height=96&width=96&text=Hero+4", alt: "Superhero 4" },
     { id: "avatar5", src: "/avtaar5.jpg?height=96&width=96&text=Hero+5", alt: "Superhero 5" },
     { id: "avatar6", src: "/avtaar6.jpg?height=96&width=96&text=Hero+6", alt: "Superhero 6" },
+    { id: "avatar7", src: "/avtaar7.jpg?height=96&width=96&text=Hero+7", alt: "Superhero 7" },
+    { id: "avatar8", src: "/avtaar8.jpg?height=96&width=96&text=Hero+8", alt: "Superhero 8" },
   ]
 
   return (
