@@ -107,10 +107,12 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-center mb-10">Meet Our Team</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: "Arjun Sharma", role: "Founder & CEO", avatar: "1" },
-              { name: "Priya Patel", role: "Creative Director", avatar: "2" },
-              { name: "Vikram Singh", role: "Head of Operations", avatar: "3" },
-              { name: "Ananya Desai", role: "Customer Experience", avatar: "4" },
+              { name: "Aseel", role: "Founder & CEO", avatar: "1" },
+              { name: "Bhavya", role: "Creative Director", avatar: "2" },
+              { name: "Vimal", role: "Head of Operations", avatar: "3" },
+              { name: "Tanishq", role: "Customer Experience", avatar: "4" },
+              { name: "Vasanth", role: "Customer Experience", avatar: "5" },
+              { name: "Manthan", role: "Customer Experience", avatar: "6" },
             ].map((member, i) => (
               <div key={i} className="text-center">
                 <div className="relative w-40 h-40 mx-auto mb-4">

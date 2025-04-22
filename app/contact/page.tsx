@@ -102,7 +102,7 @@ export default function ContactPage() {
           <div className="space-y-8">
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=300&width=600&text=Contact+Us"
+                src="/placeholder.jpg?height=300&width=600&text=Contact+Us"
                 alt="Contact SuperTees"
                 width={600}
                 height={300}
@@ -170,7 +170,7 @@ export default function ContactPage() {
                     <Link href="#">
                       <span className="sr-only">{social}</span>
                       <Image
-                        src={`/placeholder.svg?height=24&width=24&text=${social.charAt(0)}`}
+                        src={`/placeholder-logo.png?height=24&width=24&text=${social.charAt(0)}`}
                         alt={social}
                         width={24}
                         height={24}
