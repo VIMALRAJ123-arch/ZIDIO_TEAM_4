@@ -109,8 +109,8 @@ export default function AboutPage() {
             {[
               { name: "Aseel", role: "Founder & CEO", avatar: "1" },
               { name: "Bhavya", role: "Creative Director", avatar: "2" },
-              { name: "Vimal", role: "Head of Operations", avatar: "3" },
-              { name: "Tanishq", role: "Customer Experience", avatar: "4" },
+              { name: "Tanishq", role: "Head of Operations", avatar: "3" },
+              { name: "Vimal", role: "Customer Experience", avatar: "4" },
               { name: "Vasanth", role: "Customer Experience", avatar: "5" },
               { name: "Manthan", role: "Customer Experience", avatar: "6" },
             ].map((member, i) => (
