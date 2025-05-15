@@ -46,7 +46,7 @@ export default function AuthPage() {
             <div className="flex justify-center mb-4">
               <Link href="/">
                 <Image
-                  src="/placeholder.svg?height=64&width=64"
+                  src="C:\Users\Aseel\OneDrive\Desktop\Zidio webapp\public\placeholder-logo.png"
                   alt="Logo"
                   width={64}
                   height={64}
